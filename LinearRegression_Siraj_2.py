@@ -1,4 +1,4 @@
-from numpy import *
+import numpy as np
 import matplotlib.pyplot as plt
 
 # y = mx + b
@@ -56,7 +56,7 @@ def run():
 
     fig = plt.figure()
     ax = fig.add_axes([0,0,1,1])
-    ax.plot(m_array,b_array, label="b vs m")
+    ax.plot(b_array,m_array, label="b vs m")
     ax.legend()
 
     fig = plt.figure()
@@ -68,6 +68,11 @@ def run():
     ax = fig.add_axes([0,0,1,1])
     plt.scatter(x2, y2)
     plt.plot(x2, m*x2 + b)
+
+    fig = plt.figure()
+    ax = fig.add_axes([0,0,1,1])
+#    plt.scatter(x2, y2)
+    plt.plot(x2, m_array*x2 + b_array)
 
 if __name__ == '__main__':
     run()
